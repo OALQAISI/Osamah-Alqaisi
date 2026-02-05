@@ -14,22 +14,25 @@ body {
 nav {
   background-color: #003366;
   color: white;
-  padding: 10px 0;
+  padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  display: flex;
+  justify-content: flex-start; /* Align everything to left */
+  align-items: center;
 }
 
 nav h2 {
-  display: inline-block;
-  margin-left: 20px;
+  margin-right: 50px; /* Space between your name and menu */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
-  margin-right: 20px;
+  gap: 20px; /* space between menu items */
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
@@ -80,3 +83,4 @@ footer {
   background-color: #003366;
   color: white;
 }
+
