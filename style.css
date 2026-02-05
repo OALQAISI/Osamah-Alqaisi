@@ -19,20 +19,21 @@ nav {
   top: 0;
   z-index: 1000;
   display: flex;
-  justify-content: flex-start; /* Align everything to left */
   align-items: center;
+  justify-content: flex-start; /* align name + menu to left */
 }
 
 nav h2 {
-  margin-right: 50px; /* Space between your name and menu */
+  margin-right: 50px;  /* space between name and menu */
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  gap: 20px; /* space between menu items */
-  margin: 0;
-  padding: 0;
+  display: flex;        /* keeps items in a row */
+  justify-content: flex-start; /* aligns items to the left */
+  margin: 0;            /* remove default margins */
+  padding: 0;           /* remove default padding */
+  gap: 20px;            /* space between links */
 }
 
 nav ul li {
@@ -83,4 +84,5 @@ footer {
   background-color: #003366;
   color: white;
 }
+
 
