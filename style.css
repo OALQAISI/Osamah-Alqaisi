@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,6 +12,7 @@ body {
   background-color: #f8f9fa;
 }
 
+/* Navbar */
 nav {
   background-color: #003366;
   color: white;
@@ -20,24 +22,16 @@ nav {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* align name + menu to left */
 }
 
 nav h2 {
-  margin-right: 50px;  /* space between name and menu */
+  margin-right: 50px;
 }
 
 nav ul {
   list-style: none;
-  display: flex;        /* keeps items in a row */
-  justify-content: flex-start; /* aligns items to the left */
-  margin: 0;            /* remove default margins */
-  padding: 0;           /* remove default padding */
-  gap: 20px;            /* space between links */
-}
-
-nav ul li {
-  margin-left: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 nav ul li a {
@@ -49,10 +43,16 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/* Section styling */
 section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
+}
+
+h1, h2, h3 {
+  color: #003366;
+  margin-bottom: 15px;
 }
 
 #hero {
@@ -69,26 +69,42 @@ section {
   margin-bottom: 20px;
 }
 
-h1, h2, h3 {
-  color: #003366;
-}
-
+/* Lists */
 ul {
   margin-top: 10px;
   margin-left: 20px;
 }
 
+/* Skills styling */
 .skills-list {
-  column-count: 3;       /* Number of columns */
-  column-gap: 30px;      /* Space between columns */
-  list-style-type: disc; /* Keep bullets */
-  padding-left: 20px;    /* Optional padding */
+  list-style: none;
+  column-count: 3;
+  column-gap: 30px;
+  padding-left: 0;
 }
 
-.skills-list li {
-  margin-bottom: 10px;   /* Space between items vertically */
+.skills-list li::before {
+  content: "• ";
+  color: #003366;
+  font-weight: bold;
+  margin-right: 5px;
 }
 
+.skills-section h3 {
+  margin-top: 40px;
+}
+
+/* Experience section improvements */
+.experience li {
+  margin-bottom: 15px;
+}
+
+.experience li h4 {
+  margin-bottom: 5px;
+  color: #003366;
+}
+
+/* Responsive for skills columns */
 @media (max-width: 900px) {
   .skills-list {
     column-count: 2;
@@ -101,12 +117,10 @@ ul {
   }
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
   background-color: #003366;
   color: white;
 }
-
-
-
