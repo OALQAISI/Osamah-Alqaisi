@@ -78,11 +78,35 @@ ul {
   margin-left: 20px;
 }
 
+.skills-list {
+  column-count: 3;       /* Number of columns */
+  column-gap: 30px;      /* Space between columns */
+  list-style-type: disc; /* Keep bullets */
+  padding-left: 20px;    /* Optional padding */
+}
+
+.skills-list li {
+  margin-bottom: 10px;   /* Space between items vertically */
+}
+
+@media (max-width: 900px) {
+  .skills-list {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-list {
+    column-count: 1;
+  }
+}
+
 footer {
   text-align: center;
   padding: 20px;
   background-color: #003366;
   color: white;
 }
+
 
 
