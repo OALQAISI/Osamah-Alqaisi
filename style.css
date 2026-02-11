@@ -26,6 +26,7 @@ nav {
 
 nav h2 {
   margin-right: 50px;
+  font-size: 1.5rem;
 }
 
 nav ul {
@@ -37,20 +38,37 @@ nav ul {
 nav ul li a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
   text-decoration: underline;
+  color: #aaddff;
 }
 
-/* Section styling */
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Sections */
 section {
   padding: 60px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: #003366;
   margin-bottom: 15px;
 }
@@ -90,8 +108,8 @@ ul {
   margin-right: 5px;
 }
 
-.skills-section h3 {
-  margin-top: 40px;
+.skills-list li {
+  margin-bottom: 10px;
 }
 
 /* Experience section improvements */
@@ -102,19 +120,6 @@ ul {
 .experience li h4 {
   margin-bottom: 5px;
   color: #003366;
-}
-
-/* Responsive for skills columns */
-@media (max-width: 900px) {
-  .skills-list {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .skills-list {
-    column-count: 1;
-  }
 }
 
 /* Graduation Students & Projects */
@@ -136,6 +141,12 @@ ul {
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .project-card h3 {
@@ -156,7 +167,6 @@ ul {
   color: #0055aa;
 }
 
-/* Project description styling */
 .project-card .project-description {
   font-size: 0.9rem;
   color: #333;
@@ -164,13 +174,42 @@ ul {
   line-height: 1.4;
 }
 
-
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 20px 10px;
   background-color: #003366;
   color: white;
 }
 
+/* Responsive Design */
+@media (max-width: 900px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #003366;
+  }
 
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li a {
+    padding: 15px 20px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .skills-list {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-list {
+    column-count: 1;
+  }
+}
