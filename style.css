@@ -156,6 +156,14 @@ ul {
   color: #0055aa;
 }
 
+/* Project description styling */
+.project-card .project-description {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
 
 /* Footer */
 footer {
@@ -164,4 +172,5 @@ footer {
   background-color: #003366;
   color: white;
 }
+
 
