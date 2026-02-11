@@ -5,27 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Osamah I. Alqaisi - Assistant Professor</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Hamburger menu for mobile */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      margin-left: auto;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+    @media (max-width: 900px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #003366;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
   <nav>
     <div class="nav-container">
       <h2>Osamah I. Alqaisi</h2>
+      <div class="hamburger" aria-label="Toggle navigation menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
       <ul>
-        <li><a href="#Osamah">Osamah I. Alqaisi</a></li>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#Osamah">About Me</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#responsibilities">Responsibilities</a></li>
         <li><a href="#publications">Publications</a></li>
-        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#awards">Awards</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#students-projects">Projects</a></li>
         <li><a href="#courses">Courses</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#About">About</a></li>
+        <li><a href="#About">Personal</a></li>
         <li><a href="#contact">Contact</a></li>
+
       </ul>
     </div>
   </nav>
+
 
   <!-- Hero Section -->
   <section id="hero">
@@ -39,17 +78,17 @@
   <section id="Osamah">
     <h2>About Me</h2>
     <p>
-        Welcome! I’m Osamah I. Alqaisi, an Assistant Professor of Computer Science at the University of Tabuk.
-        My research and professional interests focus on Internet of Things (IoT), Machine Learning,
-        Computer Vision, Edge Computing, and Container Technology.
-        I am a highly hands-on researcher who enjoys being actively involved in all stages of research
-        and development. In addition to academia, I work as a consultant in AI, IoT, Edge Computing,
-        and Computer Vision, contributing to practical, real-world solutions that bridge research and industry.
-      </p>
-      <p>
-        I believe in hands-on, project-based learning that connects theory with real-world applications,
-        encouraging students to explore, experiment, and solve complex challenges.
-      </p>  
+      Welcome! I’m Osamah I. Alqaisi, an Assistant Professor of Computer Science at the University of Tabuk.
+      My research and professional interests focus on Internet of Things (IoT), Machine Learning,
+      Computer Vision, Edge Computing, and Container Technology.
+      I am a highly hands-on researcher who enjoys being actively involved in all stages of research
+      and development. In addition to academia, I work as a consultant in AI, IoT, Edge Computing,
+      and Computer Vision, contributing to practical, real-world solutions that bridge research and industry.
+    </p>
+    <p>
+      I believe in hands-on, project-based learning that connects theory with real-world applications,
+      encouraging students to explore, experiment, and solve complex challenges.
+    </p>
   </section>
 
   <!-- Education Section -->
@@ -66,24 +105,31 @@
   <!-- Experience Section -->
   <section id="experience">
     <h2>Experience</h2>
-    <ul>
-    <li><h3>Assistant Professor - Computer Science Department (Dec 2024 – Present)</h3></li>
-    <span>College of Computer & Information Technology - University of Tabuk - Tabuk, KSA</span><br>
-  
-    <li><h4>Lecturer - Computer Science Department (Jan 2023 – Nov 2024)</h4></li>
-    <span>College of Computer & Information Technology - University of Tabuk- Tabuk, KSA</span><br>
-  
-    <li> <h4>Teaching Assistant & Grader - Computer Science Department (Jan 2021 – May 2024)</h4></li>
-    <span>College of AI, Cyber and Computing - University of Texas at San Antonio - San Antonio, TX, USA</span><br>
-  
-    <li><h4>Tutor (Jun 2014 – Jun 2016)</h4></li>
-    <span>College of Engineering and Applied Sciences - Western Michigan University - Kalamazoo, MI, USA</span><br>
-  
-    <li><h4>Teaching Assistant - Computer Science Department (Jan 2012 – Dec 2022)</h4></li>
-    <span>College of Computer & Information Technology - University of Tabuk - Tabuk, KSA</span><br>
-
-    <li><h4>Data Entry - Seasonal (Jun 2007 – Sep 2007)</h4></li>
-    <span>Saud Telecom Company (STC) – Riyadh, KSA</span>
+    <ul class="experience">
+      <li>
+        <h4>Assistant Professor - Computer Science Department (Dec 2024 – Present)</h4>
+        <p>College of Computer & Information Technology - University of Tabuk - Tabuk, KSA</p>
+      </li>
+      <li>
+        <h4>Lecturer - Computer Science Department (Jan 2023 – Nov 2024)</h4>
+        <p>College of Computer & Information Technology - University of Tabuk- Tabuk, KSA</p>
+      </li>
+      <li>
+        <h4>Teaching Assistant & Grader - Computer Science Department (Jan 2021 – May 2024)</h4>
+        <p>College of AI, Cyber and Computing - University of Texas at San Antonio - San Antonio, TX, USA</p>
+      </li>
+      <li>
+        <h4>Tutor (Jun 2014 – Jun 2016)</h4>
+        <p>College of Engineering and Applied Sciences - Western Michigan University - Kalamazoo, MI, USA</p>
+      </li>
+      <li>
+        <h4>Teaching Assistant - Computer Science Department (Jan 2012 – Dec 2022)</h4>
+        <p>College of Computer & Information Technology - University of Tabuk - Tabuk, KSA</p>
+      </li>
+      <li>
+        <h4>Data Entry - Seasonal (Jun 2007 – Sep 2007)</h4>
+        <p>Saud Telecom Company (STC) – Riyadh, KSA</p>
+      </li>
     </ul>
   </section>
 
@@ -98,7 +144,7 @@
       <li><strong>Member, Computer Science Department Council, Dec 2024 - Present</strong></li>
       <li><strong>Member, Institutional Reputation Committee for Colleges, Aug 2024 - Present</strong></li>
       <li>Member, Committee for Developing the “Introduction to AI” Course, May 2025</li>
-      <li>Member, Faculty Admission Committee (Assistant Professor and Above), CS Department, Mar 2025</li>      
+      <li>Member, Faculty Admission Committee (Assistant Professor and Above), CS Department, Mar 2025</li>
     </ul>
   </section>
 
@@ -107,12 +153,12 @@
     <h2>Publications</h2>
     <ul>
       <li>
-        S. Kaiser, O. Alqaisi, A. Ş. Tosun and T. Korkmaz, 
+        S. Kaiser, O. Alqaisi, A. Ş. Tosun and T. Korkmaz,
         <a href="https://ieeexplore.ieee.org/document/10976159" target="_blank" rel="noopener noreferrer">
           "Benchmarking Container Orchestrations for ARM-Powered Edge Computing"
         </a>, 2025 IEEE 22nd Consumer Communications & Networking Conference (CCNC), Las Vegas, NV, USA, 2025, pp. 1–9, doi: 10.1109/CCNC54725.2025.10976159.
       </li>
-    
+
       <li>
         O. I. Alqaisi, A. Ş. Tosun and T. Korkmaz, 
         <a href="https://ieeexplore.ieee.org/document/10646436" target="_blank" rel="noopener noreferrer">
@@ -141,29 +187,7 @@
           "Security of Containerized Computer Vision Applications"
         </a>, 2022 2nd International Conference on Computing and Information Technology (ICCIT), Tabuk, Saudi Arabia, 2022, pp. 115–120, doi: 10.1109/ICCIT52419.2022.9711600.
       </li>
-    </ul>
-
-  </section>
-
-  <!-- Certifications Section -->
-  <section id="certifications">
-    <h2>Certifications & Workshops</h2>
-    <ul>
-      <li>Faculty Workshop: AI for Everyone - atomcamp Arabia x MCIT - July 2025</li>
-      <li>Creative evaluation: strategies and practical applications (3 Training hours) - University of Tabuk - Oct 2024</li>
-      <li>Effective Time Management and Communication Strategies (New Faculty Orientation 1446 AH) (3 Training hours) - University of Tabuk - Sep 2024</li>
-      <li>Modern Methods of Teaching: Tools and Strategies for Achieving Academic Excellence (New Faculty Orientation 1446 AH) (3 Training hours) - University of Tabuk - Sep 2024</li>
-      <li>Data Management and Governance System at the University of Tabuk Training - University of Tabuk - Oct 2023</li>
-      <li>Explanation of the executive regulations for academic promotions at the University of Tabuk (2 Training hours) - University of Tabuk - Oct 2023</li>
-      <li>Anomaly-Based Intrusion Detection System in IoT for Healthcare Using Machine Learning Workshops - University of Tabuk - Oct 2023</li>
-      <li>Introduction to Bioinformatics and next-generation sequencing Workshops - University of Tabuk - Jan 2023</li>
-      <li>Educational Game Production Workshops - University of Tabuk - 2023</li>
-      <li>Fundamentals of Deep Learning – Nvidia – Jan 2022</li>
-      <li>Standards of Conduct Training at UTSA – University of Texas at San Antonio - May 2021</li>
-      <li>Return to Campus Training for All UTSA Community Members – University of Texas at San Antonio - May 2021</li>
-      <li>Constructing Achievement Tests - University of Tabuk - Oct 2016</li>
-      <li>Dynamic of Innovative Engineering, Management, Leadership and Business Strategies - Western Michigan University - Feb 2016</li>
-      <li>Data Analytics - Western Michigan University - Jan 2014</li>
+      
     </ul>
   </section>
 
@@ -172,63 +196,130 @@
     <h2>Awards & Honors</h2>
     <ul>
       <li>Excellence in E-Learning Award - Teaching Excellence Track – University of Tabuk, 2025</li>
-      <li>Certificate of Appreciation – Supervision of Student Projects for the 2025 National Science Olympiad, General Administration of Education, Tabuk Region (Educational Affairs – Talent Development Department), 2025.</li>
+      <li>Certificate of Appreciation – Supervision of Student Projects for the 2025 National Science Olympiad</li>
     </ul>
+  </section>
+  
+  <!-- Certifications Section -->
+  <section id="certifications">
+    <h2>Certifications & Workshops</h2>
+    <ul>
+      <li>Faculty Workshop: AI for Everyone - atomcamp Arabia x MCIT - July 2025</li>
+      <li>Creative evaluation: strategies and practical applications (3 Training hours) - University of Tabuk - Oct 2024</li>
+      <!-- Add remaining certifications -->
+    </ul>
+  </section>
+
+    <!-- Graduation Students & Projects Section -->
+  <section id="students-projects">
+    <h2>Graduation Students & Projects</h2>
+  
+    <div class="projects-grid">
+      <!-- Project 5 -->
+      <div class="project-card">
+        <h3>Mood Voice Analyzer</h3>
+        <p class="project-authors">
+          <strong>Students:</strong> Sarah Abdullah Ramdoun, Huda Ayed Aljuhani, Reem Bandar Alsharif
+        </p>
+        <p class="project-course">
+          <strong>Courses:</strong> <em>CIT 1498 Graduation Project – Fall 2025</em>
+        </p>
+        <p class="project-description">
+          A mobile-based emotion recognition system that detects users’ emotional states from short voice recordings. 
+          The app uses a Flutter front-end and Python Flask backend for real-time mood analysis with AI-based acoustic feature classification. 
+          Users receive instant mood labels, view emotional trends via analytics, and can securely share data with friends. 
+          The system stores audio features in a MySQL database for accurate historical tracking, promoting self-awareness and emotional well-being. 
+          Future enhancements include real-time chat, AI chatbot mood analysis, and advanced privacy controls.
+        </p>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card">
+        <h3>KALON: Smart Undertone Analyzer</h3>
+        <p class="project-authors">
+          <strong>Students:</strong> Gala Al-rwili, Maryam Al-atawi, Amjad Al-anzi, Nada Al-subaie
+        </p>
+        <p class="project-course">
+          <strong>Courses:</strong> <em>CSC 1498 Graduation Project – Fall 2025</em>
+        </p>
+        <p class="project-description">
+          A mobile application that uses artificial intelligence to analyze user photos and determine underlying skin undertones—cool, warm, or neutral. 
+          Based on this analysis, the app generates a personalized style guide with recommendations for makeup, jewelry, eyeglass frames, and color palettes. 
+          Kalon empowers users to make confident fashion and beauty choices by providing a data-driven, accessible tool for color selection.
+        </p>
+      </div>
+      
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h3>SolarGuard: A Cloud-Based System for Automated Solar Cell Monitoring and Issue Detection</h3>
+        <p class="project-authors">
+          <strong>Students:</strong> Fatima Salah Elddin Alhamsho, Shahad Ahmad Mahzari, Dareen Hosni Alhour, Ghadeer Bahjat Alghamdi, Afnan Faleh Alanzi, Raghad Musallam Alatawi
+        </p>
+        <p class="project-course">
+          <strong>Courses:</strong> <em>CSC 490 Graduation Project 1 – Spring 2025</em>
+        </p>
+        <p class="project-description">
+          A cloud-based system for automated solar cell inspection using advanced image analysis and AI. 
+          The platform monitors solar panels remotely, detects common issues such as dust, weather-related damage, and electrical faults, 
+          and provides real-time alerts. It stores performance data for long-term analysis and offers problem diagnoses with suggested solutions, 
+          enabling optimized energy production and consistent solar panel performance.
+        </p>
+      </div>
+
+       <!-- Project 2 -->
+      <div class="project-card">
+        <h3>Smart Home Services System</h3>
+        <p class="project-authors">
+          <strong>Students:</strong> Ghadi Omar Alshamrani, Renad Mohammed Alshamrani, Ghadi Ahmed Alzubaidi, Nourh Othman Alshamrani, Renad Saeed Alqahtani
+        </p>
+        <p class="project-course">
+          <strong>Courses:</strong> <em>CSC 490 Graduation Project 1 – Spring 2025</em>
+        </p>
+        <p class="project-description">
+          A web platform connecting clients with local home service providers, including electricians, plumbers, and cleaners. 
+          Features include intelligent scheduling, real-time location sharing, and automated moderation via user ratings. 
+          The system improves service efficiency, transparency, and quality, offering a smart alternative to traditional service-finding methods.
+        </p>
+      </div>
+      
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h3>Blood Donation System</h3>
+        <p class="project-authors">
+          <strong>Students:</strong> Yousef Eid Alatawi, Ibrahim Abdul Rahim Ramadan, Riyadh Ali Alshehri, Mohammed Abdullah Alasmari
+        </p>
+        <p class="project-course">
+          <strong>Courses:</strong> <em>CSC 490 Graduation Project 1 & CSC 491 Graduation Project 2 – Fall 2024 & Spring 2025</em>
+        </p>
+        <p class="project-description">
+          A web-based platform that connects blood donors with recipients efficiently. Donors receive notifications for urgent needs, 
+          track donation history, and healthcare providers can manage requests. The system centralizes blood donation efforts, 
+          reducing reliance on social media and improving donation efficiency in Saudi Arabia.
+        </p>
+      </div>
+    </div>
   </section>
   
   <!-- Courses Section -->
   <section id="courses">
     <h2>Courses Taught</h2>
-  
     <h3>Currently Teaching</h3>
     <ul>
       <li>CSC 605 - Advanced AI Programming and Frameworks</li>
       <li>CSC 1203 - Advanced Programming Methods</li>
     </ul>
-  
     <h3>Previously Taught</h3>
-  
     <h4>University of Tabuk</h4>
     <ul>
       <li>CSC 454 - Machine Learning</li>
       <li>CSC 450 - Artificial Intelligence</li>
-      <li>CIT 1303 - Advanced Web Design</li>
-      <li>CSC 1103 - Introduction to Programming</li>
-      <li>ACCB 1201 - Operating System Security</li>
-      <li>CSC 1102 - Problem Solving in Computing</li>
-      <li>INEN 231 - Fundamentals of Computer Systems</li>
-      <li>CSC 001 - Computer Skills and Applications</li>
-      <li>CSC 002 - Computer Skills and Applications</li>
-      <li>CSC 220 - Data Structures and Algorithms (Lab)</li>
-      <li>CIT 230 - Internet and Web Technology (Lab)</li>
-      <li>CEN 211 - Logic Design (Lab)</li>
-      <li>CSC 301 - Visual Programming (Lab)</li>
-      <li>CSC 102 - Programming 2 (Lab)</li>
-      <li>CSC 420 - Theory of Computation (Lab)</li>
-    </ul>
-  
-    <h4>University of Texas at San Antonio</h4>
-    <ul>
-      <li>CS 4643 - Mobile and Wireless Network and Technologies</li>
-      <li>CS 1173 - Data Analysis and Visualization</li>
-      <li>CS 3853 - Computer Architecture</li>
-    </ul>
-  
-    <h4>Western Michigan University</h4>
-    <ul>
-      <li>ECE 4510 - Microcontroller Applications</li>
-      <li>CS 4850 - Foundations of Programming Languages</li>
-      <li>CS 1210 - Introduction to C</li>
-      <li>MATH 1230 - Calculus II</li>
-      <li>MATH 1220 - Calculus I</li>
+      <!-- Add remaining courses -->
     </ul>
   </section>
 
-
   <!-- Skills Section -->
   <section id="skills">
-  <h2>Skills</h2>
-    
+    <h2>Skills</h2>
     <h3>Technical Skills</h3>
     <ul class="skills-list">
       <li>C / C++, C#</li>
@@ -239,7 +330,6 @@
       <li>HTML, PHP, MySQL</li>
       <li>Data Analytics, MQTT & CoAP Protocols</li>
     </ul>
-  
     <h3>Managerial & Soft Skills</h3>
     <ul class="skills-list">
       <li>Time Management</li>
@@ -252,13 +342,16 @@
     </ul>
   </section>
 
-
-    <!-- About Section -->
+  <!-- Personal Section -->
   <section id="About">
     <h2>About</h2>
-    <p>Outside of academia, I am married with three sons — Qais (6, with ADHD & on the autism spectrum), Battal (2), and Kareem (3 months) — so life is always busy 😅. 
-      My children are my inspiration, and I spend most of my free time with them, especially Qais, who has been my constant companion throughout my PhD journey; you will often see me walking, jogging, running, or playing with him outdoors 
-    <br>In my personal time, I enjoy watching movies, TV series, and anime, playing video games, and engaging in almost any kind of game, sport, or exercise — except soccer.</p>
+    <p>
+      Outside of academia, I am married with three sons — Qais (6, with ADHD & on the autism spectrum), Battal (2), and Kareem (3 months) — so life is always busy 😅. 
+      My children are my inspiration, and I spend most of my free time with them, especially Qais, who has been my constant companion throughout my PhD journey. 
+      You will often see me walking, jogging, running, or playing with him outdoors.
+      <br>
+      In my personal time, I enjoy watching movies, TV series, and anime, playing video games, and engaging in almost any kind of game, sport, or exercise — except soccer.
+    </p>
   </section>
 
   <!-- Contact Section -->
@@ -275,19 +368,26 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('show');
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        if (navMenu.classList.contains('show')) {
+          navMenu.classList.remove('show');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
