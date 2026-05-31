@@ -170,14 +170,10 @@ ul {
 }
 
 /* Courses section spacing between universities */
-.sems-block {
-  padding-left: 20px;
-  margin: 20px 0;
+.lined {
   border-left: 3px solid #003366;
-}
-.uni-block {
-  margin-top: 50px;
-  padding-top: 15px;
+  padding-left: 12px;
+  margin: 20px 0 10px 0;
 }
 
 /* Footer */
