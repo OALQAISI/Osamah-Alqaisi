@@ -171,33 +171,38 @@ ul {
   align-items: start;
 }
 
+/* =========================
+   PROJECT CARD
+========================= */
 .project-card {
-  position: relative;
-  overflow: hidden;
   background: #fff;
   border-radius: 10px;
   padding: 15px;
   border: 1px solid #eee;
   transition: 0.3s ease;
+  cursor: pointer;
 }
 
+/* hover effect only (no layout breaking) */
 .project-card:hover {
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
+/* =========================
+   PROJECT DETAILS (EXPANDABLE)
+========================= */
 .project-details {
   opacity: 0;
-  visibility: hidden;
-  position: absolute;
-  top: 70px;
-  left: 15px;
-  right: 15px;
+  max-height: 0;
+  overflow: hidden;
   transition: 0.3s ease;
 }
 
+/* show on hover */
 .project-card:hover .project-details {
   opacity: 1;
-  visibility: visible;
+  max-height: 1000px; /* enough for full content */
+  margin-top: 10px;
 }
 
 /* =========================
