@@ -36,7 +36,7 @@ section {
   margin: auto;
 }
 
-/* Global list fix (IMPORTANT) */
+/* Global list fix */
 ul {
   margin: 8px 0 12px 20px;
 }
@@ -110,7 +110,7 @@ nav ul li a:hover {
 }
 
 /* =========================
-   Section Blocks (Courses / grouped content)
+   Section Blocks
 ========================= */
 .section-block {
   margin-bottom: 25px;
@@ -124,7 +124,7 @@ nav ul li a:hover {
 }
 
 /* =========================
-   Courses Fix (important cleanup)
+   Courses Fix (important)
 ========================= */
 .uni {
   margin-bottom: 18px;
@@ -174,7 +174,7 @@ nav ul li a:hover {
 }
 
 /* =========================
-   Projects
+   Projects (FIXED STRUCTURE)
 ========================= */
 .projects-grid {
   display: grid;
@@ -187,16 +187,24 @@ nav ul li a:hover {
   border-radius: 8px;
   padding: 12px;
   overflow: hidden;
-  height: 80px;
   transition: 0.3s ease;
   cursor: pointer;
 }
 
+/* Title always visible */
 .project-card h3 {
   font-size: 1.1rem;
-  margin: 0;
+  margin-bottom: 6px;
 }
 
+/* NEW: course always visible */
+.project-course {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Hidden content (only details now) */
 .project-details {
   opacity: 0;
   max-height: 0;
@@ -204,8 +212,8 @@ nav ul li a:hover {
   transition: 0.3s ease;
 }
 
+/* Hover expansion */
 .project-card:hover {
-  height: auto;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
