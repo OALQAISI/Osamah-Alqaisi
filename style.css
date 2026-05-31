@@ -43,16 +43,19 @@ ul {
 /* =========================
    NAVBAR (FIXED FOR YOUR HTML)
 ========================= */
+/* =========================
+   NAVBAR FIX (PROPER CENTER ALIGNMENT)
+========================= */
+
 nav {
   background-color: #003366;
-  color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
   padding: 10px 20px;
 }
 
-/* Main container inside nav */
+/* Use GRID for perfect centering */
 .nav-container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -60,31 +63,30 @@ nav {
   width: 100%;
 }
 
-/* Left (optional logo space) */
+/* LEFT (empty placeholder) */
 .nav-left {
-  flex: 1;
+  justify-self: start;
 }
 
-/* Center title */
+/* CENTER TITLE */
 .nav-title {
   justify-self: center;
-  text-align: center;
 }
 
 .nav-title h2 {
   color: white;
-  font-size: 1.4rem;
   margin: 0;
+  font-size: 1.4rem;
 }
 
-/* Right side menu */
+/* RIGHT MENU */
 .nav-right {
   justify-self: end;
   display: flex;
   align-items: center;
 }
 
-/* Menu */
+/* MENU */
 nav ul {
   list-style: none;
   display: flex;
@@ -94,13 +96,10 @@ nav ul {
 nav ul li a {
   color: white;
   text-decoration: none;
-  transition: 0.3s;
-  font-size: 0.95rem;
 }
 
 nav ul li a:hover {
   color: #aaddff;
-  text-decoration: underline;
 }
 
 /* =========================
