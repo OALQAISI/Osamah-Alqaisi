@@ -68,9 +68,30 @@ section {
   margin: auto;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   color: #003366;
   margin-bottom: 15px;
+}
+
+/* Remove extra spacing chaos */
+h3, h4 {
+  margin: 5px 0;
+}
+
+/* Control spacing between sections */
+.section-block {
+  margin-bottom: 25px;
+}
+
+/* Make lists tighter */
+.section-block ul {
+  margin: 5px 0 15px 20px;
+}
+
+/* Optional: make university headers cleaner */
+.section-block h4 {
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 #hero {
