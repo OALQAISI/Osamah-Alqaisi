@@ -7,17 +7,27 @@
   });
 });
 */
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const targetId = this.getAttribute('href');
+// Hamburger toggle
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
-    // only handle internal links like #hero
-    if (targetId.startsWith('#') && document.querySelector(targetId)) {
-      e.preventDefault();
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
 
-      document.querySelector(targetId).scrollIntoView({
-        behavior: 'smooth'
+// Smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute("href"));
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth"
       });
     }
+
+    navLinks.classList.remove("show");
   });
 });
