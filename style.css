@@ -2,16 +2,69 @@
    Reset & Base
 ========================= */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
 
 body {
   line-height: 1.6;
+  background: #f5f7fa;
   color: #333;
-  background-color: #f8f9fa;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #003366;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  z-index: 1000;
+}
+
+/* Title */
+.nav-title h1 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #aaddff;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
 }
 
 /* =========================
@@ -38,104 +91,6 @@ section {
 
 ul {
   margin: 8px 0 12px 20px;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-nav {
-  background-color: #003366;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 10px 20px;
-}
-
-.nav-container {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-}
-
-/* LEFT */
-.nav-left {}
-
-/* CENTER */
-.nav-title {
-  justify-self: center;
-}
-
-.nav-title h2 {
-  color: white;
-  margin: 0;
-  font-size: 1.4rem;
-}
-
-/* RIGHT */
-.nav-right {
-  justify-self: end;
-  display: flex;
-  align-items: center;
-}
-
-/* IMPORTANT FIX */
-.nav-right ul {
-  display: flex;
-  flex-direction: row;
-  gap: 18px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.nav-right ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-/* hover */
-.nav-right ul li a:hover {
-  color: #aaddff;
-}
-
-/* hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: 15px;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background: white;
-  margin: 4px 0;
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-right ul {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    left: 0;
-    background: #003366;
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .nav-right ul.show {
-    display: flex;
-  }
 }
 
 /* =========================
@@ -317,5 +272,27 @@ footer {
 
   .nav-title h2 {
     font-size: 1.1rem;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #003366;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links.show {
+    display: flex;
   }
 }
