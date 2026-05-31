@@ -74,7 +74,11 @@ body {
 /* =========================
    Typography
 ========================= */
-h1, h2, h3, h4 {
+/* Global body headings (ONLY inside content) */
+section h1,
+section h2,
+section h3,
+section h4 {
   color: #003366;
   margin-bottom: 10px;
   line-height: 1.3;
