@@ -1,4 +1,6 @@
-/* Reset and base styles */
+/* =========================
+   Reset & Base
+========================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +14,31 @@ body {
   background-color: #f8f9fa;
 }
 
-/* Navbar */
+/* =========================
+   Typography
+========================= */
+h1, h2, h3, h4 {
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+h3, h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* =========================
+   Layout Sections
+========================= */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* =========================
+   Navbar
+========================= */
 nav {
   background-color: #003366;
   color: white;
@@ -25,7 +51,7 @@ nav {
 }
 
 nav h2 {
-  margin-right: 50px;
+  margin-right: 40px;
   font-size: 1.5rem;
 }
 
@@ -38,7 +64,7 @@ nav ul {
 nav ul li a {
   color: white;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
@@ -46,54 +72,24 @@ nav ul li a:hover {
   color: #aaddff;
 }
 
-/* Hamburger Menu */
+/* Hamburger */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
   margin-left: auto;
 }
+
 .hamburger div {
   width: 25px;
   height: 3px;
-  background-color: white;
+  background: white;
   margin: 4px 0;
-  transition: 0.4s;
 }
 
-/* Sections */
-section {
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-h1, h2 {
-  color: #003366;
-  margin-bottom: 15px;
-}
-
-/* Remove extra spacing chaos */
-h3, h4 {
-  margin: 5px 0;
-}
-
-/* Control spacing between sections */
-.section-block {
-  margin-bottom: 25px;
-}
-
-/* Make lists tighter */
-.section-block ul {
-  margin: 5px 0 15px 20px;
-}
-
-/* Optional: make university headers cleaner */
-.section-block h4 {
-  margin-top: 15px;
-  font-weight: bold;
-}
-
+/* =========================
+   Hero
+========================= */
 #hero {
   text-align: center;
   padding: 80px 20px;
@@ -108,13 +104,46 @@ h3, h4 {
   margin-bottom: 20px;
 }
 
-/* Lists */
+/* =========================
+   Lists (GLOBAL CLEANUP)
+   (IMPORTANT FIX FOR YOUR ISSUE)
+========================= */
 ul {
-  margin-top: 10px;
-  margin-left: 20px;
+  margin: 5px 0 10px 20px;
 }
 
-/* Skills styling */
+/* =========================
+   Section Blocks (Courses / Content groups)
+========================= */
+.section-block {
+  margin-bottom: 25px;
+}
+
+/* =========================
+   Courses Layout FIX (KEY PART)
+========================= */
+.uni {
+  margin-bottom: 18px;
+}
+
+.uni h4 {
+  margin: 10px 0 5px 0;
+}
+
+.uni ul {
+  margin: 0 0 10px 20px;
+}
+
+/* Optional left line style */
+.lined {
+  border-left: 3px solid #003366;
+  padding-left: 12px;
+  margin: 20px 0 10px 0;
+}
+
+/* =========================
+   Skills
+========================= */
 .skills-list {
   list-style: none;
   column-count: 3;
@@ -122,18 +151,22 @@ ul {
   padding-left: 0;
 }
 
-.skills-list li::before {
-  content: "• ";
-  color: #003366;
-  font-weight: bold;
-  margin-right: 5px;
-}
-
 .skills-list li {
   margin-bottom: 10px;
+  position: relative;
+  padding-left: 15px;
 }
 
-/* Experience section improvements */
+.skills-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #003366;
+}
+
+/* =========================
+   Experience
+========================= */
 .experience li {
   margin-bottom: 15px;
 }
@@ -143,7 +176,9 @@ ul {
   color: #003366;
 }
 
-/* Graduation Students & Projects */
+/* =========================
+   Projects
+========================= */
 #students-projects {
   padding: 60px 20px;
   max-width: 1000px;
@@ -157,69 +192,61 @@ ul {
 }
 
 .project-card {
-  background-color: #f9f9f9;
+  background: #f9f9f9;
   border-radius: 8px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  height: 80px; /* Only title visible initially */
   padding: 10px;
+  overflow: hidden;
+  height: 80px;
+  transition: 0.3s ease;
+  cursor: pointer;
 }
 
 .project-card h3 {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
-.project-card .project-details {
+.project-details {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .project-card:hover {
-  height: auto; /* Expand to fit content */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  height: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 .project-card:hover .project-details {
   opacity: 1;
-  max-height: 1000px; /* Large enough to show all content */
+  max-height: 1000px;
   margin-top: 10px;
 }
 
-/* Courses section spacing between universities */
-.lined {
-  border-left: 3px solid #003366;
-  padding-left: 12px;
-  margin: 20px 0 10px 0;
-}
-
-/* Footer */
+/* =========================
+   Footer
+========================= */
 footer {
   text-align: center;
-  padding: 20px 10px;
-  background-color: #003366;
+  padding: 20px;
+  background: #003366;
   color: white;
 }
 
-/* Responsive Design */
+/* =========================
+   Responsive
+========================= */
 @media (max-width: 900px) {
   nav ul {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #003366;
+    background: #003366;
   }
 
   nav ul.show {
     display: flex;
-  }
-
-  nav ul li a {
-    padding: 15px 20px;
   }
 
   .hamburger {
@@ -236,4 +263,3 @@ footer {
     column-count: 1;
   }
 }
-
