@@ -1,73 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alqaisi, O.</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Hamburger menu for mobile */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      margin-left: auto;
-    }
-    .hamburger div {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 4px 0;
-      transition: 0.4s;
-    }
-    @media (max-width: 900px) {
-      nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #003366;
-      }
-      nav ul.show {
-        display: flex;
-      }
-      .hamburger {
-        display: flex;
-      }
-    }
-  </style>
-</head>
-<body>
-  <!-- Navbar -->
-  <nav>
-  <div class="nav-container">
-    <div class="nav-left"></div>
-    <div class="nav-title">
-      <h2>Osamah I. Alqaisi</h2>
-    </div>
-    <div class="nav-right">
-      <div class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#responsibilities">Responsibilities</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#research-projects">Active Research Projects</a></li>
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#students-projects">Projects</a></li>
-        <li><a href="#courses">Courses</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#research-interests">Research Interests</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
 
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-title">
+    <h1>Dr. Osamah I. Alqaisi</h1>
   </div>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#responsibilities">Responsibilities</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#research-projects">Active Research Projects</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#students-projects">Projects</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#research-interests">Research Interests</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
   <!-- Hero Section -->
