@@ -169,6 +169,12 @@ ul {
   margin-top: 10px;
 }
 
+/* Courses section spacing between universities */
+.uni-block {
+  margin-top: 40px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
 
 /* Footer */
 footer {
