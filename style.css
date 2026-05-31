@@ -15,6 +15,10 @@ body {
 }
 
 /* ================= NAVBAR ================= */
+.navbar h1 {
+  color: white;
+}
+
 .navbar {
   position: sticky;
   top: 0;
