@@ -15,10 +15,6 @@ body {
 }
 
 /* ================= NAVBAR ================= */
-.navbar h1 {
-  color: white;
-}
-
 .navbar {
   position: sticky;
   top: 0;
@@ -75,10 +71,7 @@ body {
    Typography
 ========================= */
 /* Global body headings (ONLY inside content) */
-section h1,
-section h2,
-section h3,
-section h4 {
+h1, h2, h3, h4 {
   color: #003366;
   margin-bottom: 10px;
   line-height: 1.3;
@@ -88,6 +81,9 @@ h3, h4 {
   margin-top: 6px;
 }
 
+.navbar h1 {
+  color: white;
+}
 /* =========================
    Layout
 ========================= */
