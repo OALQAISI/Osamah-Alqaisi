@@ -31,58 +31,86 @@ h3, h4 {
    Layout
 ========================= */
 section {
-  padding: 10px 10px;
+  padding: 20px;
   max-width: 1000px;
   margin: auto;
 }
 
-/* Global list fix */
 ul {
   margin: 8px 0 12px 20px;
 }
 
 /* =========================
-   Navbar
+   NAVBAR (FIXED FOR YOUR HTML)
 ========================= */
 nav {
   background-color: #003366;
   color: white;
-  padding: 10px 20px;
   position: sticky;
   top: 0;
   z-index: 1000;
+  padding: 10px 20px;
+}
+
+/* Main container inside nav */
+.nav-container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Left (optional logo space) */
+.nav-left {
+  flex: 1;
+}
+
+/* Center title */
+.nav-title {
+  flex: 2;
+  text-align: center;
+}
+
+.nav-title h2 {
+  color: white;
+  font-size: 1.4rem;
+}
+
+/* Right side menu */
+.nav-right {
+  flex: 3;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
-nav h2 {
-  font-size: 1.5rem;
-  margin-right: 40px;
-}
-
+/* Menu */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 18px;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   transition: 0.3s;
+  font-size: 0.95rem;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
   color: #aaddff;
+  text-decoration: underline;
 }
 
-/* Hamburger */
+/* =========================
+   HAMBURGER MENU
+========================= */
 .hamburger {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  margin-left: auto;
+  margin-left: 15px;
 }
 
 .hamburger div {
@@ -90,10 +118,11 @@ nav ul li a:hover {
   height: 3px;
   background: white;
   margin: 4px 0;
+  transition: 0.3s;
 }
 
 /* =========================
-   Hero
+   HERO
 ========================= */
 #hero {
   text-align: center;
@@ -110,36 +139,31 @@ nav ul li a:hover {
 }
 
 /* =========================
-   Section Blocks
+   SECTION STYLES
 ========================= */
 .section-block {
   margin-bottom: 25px;
 }
 
-/* Left border headings */
 .lined {
-  border-left: 3px solid #003366;
+  border-left: 4px solid #003366;
   padding-left: 12px;
   margin: 20px 0 10px;
 }
 
 /* =========================
-   Courses Fix (important)
+   EXPERIENCE
 ========================= */
-.uni {
-  margin-bottom: 18px;
+.experience li {
+  margin-bottom: 15px;
 }
 
-.uni h4 {
-  margin: 10px 0 5px;
-}
-
-.uni ul {
-  margin: 0 0 10px 20px;
+.experience li h4 {
+  color: #003366;
 }
 
 /* =========================
-   Skills
+   SKILLS
 ========================= */
 .skills-list {
   list-style: none;
@@ -162,19 +186,7 @@ nav ul li a:hover {
 }
 
 /* =========================
-   Experience
-========================= */
-.experience li {
-  margin-bottom: 15px;
-}
-
-.experience li h4 {
-  margin-bottom: 5px;
-  color: #003366;
-}
-
-/* =========================
-   Projects (FIXED STRUCTURE)
+   PROJECTS GRID
 ========================= */
 .projects-grid {
   display: grid;
@@ -183,28 +195,32 @@ nav ul li a:hover {
 }
 
 .project-card {
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 12px;
-  overflow: hidden;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
   transition: 0.3s ease;
   cursor: pointer;
+  border: 1px solid #eee;
 }
 
-/* Title always visible */
+.project-card:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Always visible title */
 .project-card h3 {
   font-size: 1.1rem;
   margin-bottom: 6px;
 }
 
-/* NEW: course always visible */
+/* Course line */
 .project-course {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #555;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-/* Hidden content (only details now) */
+/* Hidden details */
 .project-details {
   opacity: 0;
   max-height: 0;
@@ -212,11 +228,7 @@ nav ul li a:hover {
   transition: 0.3s ease;
 }
 
-/* Hover expansion */
-.project-card:hover {
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-}
-
+/* Show on hover */
 .project-card:hover .project-details {
   opacity: 1;
   max-height: 1000px;
@@ -224,24 +236,48 @@ nav ul li a:hover {
 }
 
 /* =========================
-   Footer
+   COURSES
+========================= */
+.uni {
+  margin-bottom: 18px;
+}
+
+.uni h4 {
+  margin: 10px 0 5px;
+}
+
+.uni ul {
+  margin-left: 20px;
+}
+
+/* =========================
+   FOOTER
 ========================= */
 footer {
   text-align: center;
   padding: 20px;
   background: #003366;
   color: white;
+  margin-top: 30px;
 }
 
 /* =========================
-   Responsive
+   RESPONSIVE
 ========================= */
 @media (max-width: 900px) {
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
   nav ul {
     display: none;
     flex-direction: column;
     width: 100%;
-    background: #003366;
+    background-color: #003366;
+    margin-top: 10px;
+    padding: 10px;
   }
 
   nav ul.show {
@@ -260,5 +296,9 @@ footer {
 @media (max-width: 600px) {
   .skills-list {
     column-count: 1;
+  }
+
+  .nav-title h2 {
+    font-size: 1.1rem;
   }
 }
