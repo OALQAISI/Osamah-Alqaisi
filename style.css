@@ -171,24 +171,16 @@ ul {
   align-items: start;
 }
 
-/* =========================
-   PROJECTS GRID
-========================= */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  align-items: start;
-}
-
 /* PROJECT CARD */
 .project-card {
   background: #fff;
   border-radius: 10px;
   padding: 15px;
   border: 1px solid #eee;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 /* shadow hover */
@@ -196,21 +188,20 @@ ul {
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* DETAILS (PROPER EXPAND)*/
+/* DETAILS (PROPER EXPAND) */
 .project-details {
+  opacity: 0;
   max-height: 0;
   overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 /* expand ONLY hovered card */
 .project-card:hover .project-details {
-  max-height: 800px;
   opacity: 1;
+  max-height: 2000px; /* big enough to fit content */
   margin-top: 12px;
 }
-
 /* =========================
    COURSES
 ========================= */
